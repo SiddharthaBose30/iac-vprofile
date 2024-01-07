@@ -2,8 +2,7 @@ name: "EKS IAAC"
 on:
   push:
     branches:
-      - main
-      - stage
+      - '**'
     paths:
       - /terraform/**
   pull_request:
