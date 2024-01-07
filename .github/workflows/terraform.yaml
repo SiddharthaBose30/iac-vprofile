@@ -2,15 +2,15 @@ name: "EKS IAAC"
 on:
   push:
     branches:
-      - "main"
-      - "stage"
+      - main
+      - stage
     paths:
-      - "/terraform/**"
+      - /terraform/**
   pull_request:
     branches:
-      - "main"
+      - main
     paths:
-      - "/terraform/**"
+      - /terraform/**
 env:
   AWS_ACCESS_KEY_ID: ${{secret.AWS_ACCESS_KEY_ID}}
   AWS_SECRET_ACCESS_KEY: ${{secret.AWS_SECRET_ACCESS_KEY}}
@@ -19,7 +19,7 @@ env:
   CLUSTER_NAME: GitOps-EKS-cluster
 jobs:
   terraform:
-    name: "Apply Terraform code changes"
+    name: Apply Terraform code changes
     runs-on: ubuntu-latest
     defaults:
       run:
