@@ -10,4 +10,4 @@ variable "clusterName" {
   default     = "GitOps-EKS-cluster"
 }
 
-##
+####
